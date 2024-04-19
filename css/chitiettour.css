@@ -44,15 +44,11 @@
 /* Tinh so luong */
 
 .colright{
-    margin-left: 20px;
     width: 100%;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 32px rgba(0,0,0,.12);
     
-    
-   
-
 }
 
 .nl, .inputngay{
@@ -60,10 +56,6 @@
     border-radius: 10px;
     border: #cecece 1px solid;
     padding: 5px;
-    
-    
-
-
 }
 
 .tien{
@@ -82,7 +74,12 @@
 .tien button:hover{
     background-color: #cecece;
 }
- #tinh, #tinhTreEm{
+#tinh1, #tinhTreEm1{
+    width: 70px;
+    height: 35px;
+    text-align: center;
+}
+#tinh, #tinhTreEm{
     width: 40px;
     height: 35px;
     background-color: none;

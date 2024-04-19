@@ -15,6 +15,7 @@
     <script src="../js/cardt.js"></script>
     <script src="../js/header.js"></script>
     <script src="../js/footer.js"></script>
+    <script src="../js/xuLyDatTour.js"></script>
 
     <script>
         $(document).ready(function() {
@@ -138,24 +139,40 @@
             $("#txtNgay").blur(function(){
                 ktraNgay();
             })
+
+
+            //Xử lý sự kiện xác nhận đặt tour
+            $("#btnDatTour").click(function() {
+            $('#bookingModal').modal('show');
             
-                    $("#btnDatTour").click(function() {
-                $('#bookingModal').modal('show');
-                
-                let departureDate = localStorage.getItem("txtNgay");
-                let adults = localStorage.getItem("tinh");
-                let children = localStorage.getItem("tinhTreEm");
-                let totalPrice = localStorage.getItem("tongGia");
+            let departureDate = $("#txtNgay").val();
+            let adults = $("#tinh").val();
+            let children = $("#tinhTreEm").val();
+            let totalPrice = $("#tongGia").text();
 
-                $("#txtNgay").val(departureDate);
-                $("#tinh").val(adults);
-                $("#tinhTreEm").val(children);
-                $("#tongGia").val(totalPrice);
+            $("#txtNgay1").val(departureDate);
+            $("#tinh1").val(adults);
+            $("#tinhTreEm1").val(children);
+            $("#tongGia1").val(totalPrice);
             });
 
-            $("#confirmBooking").click(function() {
-                // Thực hiện xác nhận đặt tour, gửi dữ liệu lên máy chủ, vv.
+            //Xử lý sự kiện kiểm tra ràng buộc của form thông tin đăng ký tour
+            $(document).ready(function() {
+                $('#confirmBooking').click(function() {
+                // var hotenIsValid = checkHT();
+                // var emailIsValid = checkEmail();
+                // var noidungIsValid = checkND();
+                // if (hotenIsValid && emailIsValid && noidungIsValid) {
+                //     $('#successModal').modal('show');
+                // }
+                $('#successModal').modal('show');
             });
+            });
+            //Xử lý sự kiện nút liên lệ gọi đến trang liên hệ
+            $("#lienHeTuVanBtn").click(function() {
+                window.location.href = "../html/lienhe.html";
+            });
+
 });
 
     </script>
@@ -167,7 +184,7 @@
             <h3 class="cap text-blue fw-bold my-4" id="txtTen">Tour: </h3>
         </div>
         <div class="row">
-            <div class="col-8">
+            <div class="col-md-8 col-sm-12">
                 <img src="" id="img5" class="img-fluid" alt="">
 
                 <div class="nd my-4" >
@@ -178,7 +195,7 @@
                     <p id="txtLichTrinh" style="line-height: 30px; word-spacing: 2px;"></p>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-md-4 col-sm-12">
                 <div class="colright container " >
                     <h3 class="text-blue fw-bold">Lịch trình và Giá</h3>
                     <h6 class="my-4">Chọn ngày khởi hành và xem giá</h6>
@@ -192,7 +209,6 @@
                     <div class="row my-4 nl align-items-center ">
                         <div class="col">
                             <label for="">Người lớn</label>
-
                         </div>
                         <div class="col">
                             <label for="" id="txtGia"></label>
@@ -225,57 +241,84 @@
                     </div>
                     <div class="row my-4">
                         <div class="col">
-                            <button class="btn border-danger w-100 p-2 fw-bold fs-5 text-danger">Liên hệ tư vấn</button>
+                            <button class="btn border-danger w-100 p-2 fw-bold fs-5 text-danger" id="lienHeTuVanBtn">Liên hệ tư vấn</button>
                         </div>
                         <div class="col">
                             <button type="button" class="btn btn-danger w-100 p-2 fw-bold fs-5" id="btnDatTour" data-bs-toggle="modal" data-bs-target="#bookingModal">
                                 Đặt Tour ngay
                             </button>
-                        
                             <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Đặt Tour</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form id="bookingForm">
-                                                <div class="mb-3">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title fw-bold text-blue" id="exampleModalLabel" >Thông Tin Đăng Ký Tour</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body p-4">
+                                        <form id="bookingForm">
+                                            <div class="row mb-3">
+                                                <div class="col-md-12">
                                                     <label for="txtHoTen" class="form-label">Họ và tên:</label>
+                                                </div>
+                                                <div class="col-md-12">
                                                     <input type="text" class="form-control" id="txtHoTen">
                                                 </div>
-                                                <div class="mb-3">
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-12">
                                                     <label for="txtEmail" class="form-label">Email:</label>
+                                                </div>
+                                                <div class="col-md-12">
                                                     <input type="email" class="form-control" id="txtEmail">
                                                 </div>
-                                                <div class="mb-3">
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-12">
                                                     <label for="txtSoDienThoai" class="form-label">Số điện thoại:</label>
+                                                </div>
+                                                <div class="col-md-12">
                                                     <input type="tel" class="form-control" id="txtSoDienThoai">
                                                 </div>
-                                                <div class="mb-3">
-                                                    <label for="txtNgay" class="form-label">Ngày khởi hành:</label>
-                                                    <input type="text" class="form-control" id="txtNgay" readonly>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-12">
+                                                    <label for="txtNgay1" class="form-label">Ngày khởi hành:</label>
                                                 </div>
-                                                <div class="mb-3">
-                                                    <label for="tinh" class="form-label">Số người lớn:</label>
-                                                    <input type="text" class="form-control" id="tinh" readonly>
+                                                <div class="col-md-12">
+                                                    <input type="text" class="form-control" id="txtNgay1" readonly>
                                                 </div>
-                                                <div class="mb-3">
-                                                    <label for="tinhTreEm" class="form-label">Số trẻ em:</label>
-                                                    <input type="text" class="form-control" id="tinhTreEm" readonly>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-2">
+                                                    <label for="tinh1" class="form-label">Số người lớn:</label>
                                                 </div>
-                                                <div class="mb-3">
-                                                    <label for="tongGia" class="form-label">Tổng giá:</label>
-                                                    <input type="text" class="form-control" id="tongGia" readonly>
+                                                <div class="col-md-3">
+                                                    <input type="text" class="form-control" id="tinh1" readonly>
                                                 </div>
-                                                
-                                            </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                                            <button type="button" class="btn btn-primary" id="confirmBooking">Xác nhận đặt tour</button>
-                                        </div>
+                                            </div>
+                                            <div class="row mb-3">  
+                                                <div class="col-md-2">
+                                                    <label for="tinhTreEm1" class="form-label">Số trẻ em:</label>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <input type="text" class="form-control" id="tinhTreEm1" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-12">
+                                                    <label for="tongGia1" class="form-label">Tổng giá:</label>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <input type="text" class="form-control" id="tongGia1" readonly>
+                                                </div>
+                                            </div>
+                                            
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                        <button type="button" class="btn btn-primary" id="confirmBooking">Xác nhận đặt tour</button>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -284,45 +327,56 @@
                 </div>
                 <div class="colright container my-3">
                     <div class="row my-3">
-                        <div class="col">
+                        <div class="col-md-6 col-6">
                             <i class="fa-solid fa-check text-success"></i>
                             <label class="mx-2" for="">Bảo hiểm</label>
                         </div>
-                        <div class="col">
+                        <div class="col-md-6 col-6">
                             <i class="fa-solid fa-check text-success"></i>
                             <label class="mx-2" for="">Bữa ăn</label>
                         </div>
                     </div>
                     <div class="row my-3">
-                        <div class="col">
+                        <div class="col-md-6 col-6">
                             <i class="fa-solid fa-check text-success"></i>
                             <label class="mx-2" for="">Hướng dẫn viên</label>
                         </div>
-                        <div class="col">
+                        <div class="col-md-6 col-6">
                             <i class="fa-solid fa-check text-success"></i>
                             <label class="mx-2" for="">Vé tham quan</label>
                         </div>
                     </div>
                     <div class="row my-3">
-                        <div class="col">
+                        <div class="col-md-6 col-6">
                             <i class="fa-solid fa-check text-success"></i>
                             <label class="mx-2" for="">Xe Limousine</label>
                         </div>
-                        <div class="col">
+                        <div class="col-md-6 col-6">
                             <i class="fa-solid fa-check text-success"></i>
                             <label class="mx-2" for="">Xe đưa đón</label>
                         </div>
                     </div>
-
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Thông Báo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Đặt Tour Thành Công
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                        </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-
     <div id="footer"></div>
-    
-
-
 </body>
 </html>

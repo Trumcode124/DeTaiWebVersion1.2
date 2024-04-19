@@ -152,174 +152,173 @@ $(document).ready(function() {
             errUserInput.innerHTML = ""
         }
     
-    })
+      })
+   // ------------ SEARCH ------------
+   const departureInput = document.querySelector("#departure");
+   const destinationInput = document.querySelector("#destination");
+   const recomentList = [
+       "An Giang",
+       "Bà Rịa - Vũng Tàu",
+       "Bạc Liêu",
+       "Bắc Giang",
+       "Bắc Kạn",
+       "Bắc Ninh",
+       "Bến Tre",
+       "Bình Dương",
+       "Bình Định",
+       "Bình Phước",
+       "Bình Thuận",
+       "Cà Mau",
+       "Cao Bằng",
+       "Cần Thơ",
+       "Đà Nẵng",
+       "Đắk Lắk",
+       "Đắk Nông",
+       "Điện Biên",
+       "Đồng Nai",
+       "Đồng Tháp",
+       "Gia Lai",
+       "Hà Giang",
+       "Hà Nam",
+       "Hà Nội",
+       "Hà Tĩnh",
+       "Hải Dương",
+       "Hải Phòng",
+       "Hậu Giang",
+       "Hòa Bình",
+       "Hưng Yên",
+       "Khánh Hòa",
+       "Kiên Giang",
+       "Kon Tum",
+       "Lai Châu",
+       "Lạng Sơn",
+       "Lào Cai",
+       "Lâm Đồng",
+       "Long An",
+       "Nam Định",
+       "Nghệ An",
+       "Ninh Bình",
+       "Quảng Bình",
+       "Quảng Nam",
+       "Quảng Ngãi",
+       "Quảng Ninh",
+       "Quảng Trị",
+       "Sóc Trăng",
+       "Sơn La",
+       "Tây Ninh",
+       "Thái Bình",
+       "Thái Nguyên",
+       "Thanh Hóa",
+       "Thừa Thiên Huế",
+       "Tiền Giang",
+       "TP. Hồ Chí Minh",
+       "Tuyên Quang",
+       "Vĩnh Long",
+       "Vĩnh Phúc",
+       "Yên Bái"
+   ];
+   const autoBoxDeparture = document.querySelector(".departure .autobox");
+   const autoBoxDestination = document.querySelector(".destination .autobox");
+   
+   const showAddress = (list, num, autobox, input) => {
+       let tempArr = [];
+       let listData;
 
-    // ------------ SEARCH ------------
-    const departureInput = document.querySelector("#departure");
-    const destinationInput = document.querySelector("#destination");
-    const recomentList = [
-        "An Giang",
-        "Bà Rịa - Vũng Tàu",
-        "Bạc Liêu",
-        "Bắc Giang",
-        "Bắc Kạn",
-        "Bắc Ninh",
-        "Bến Tre",
-        "Bình Dương",
-        "Bình Định",
-        "Bình Phước",
-        "Bình Thuận",
-        "Cà Mau",
-        "Cao Bằng",
-        "Cần Thơ",
-        "Đà Nẵng",
-        "Đắk Lắk",
-        "Đắk Nông",
-        "Điện Biên",
-        "Đồng Nai",
-        "Đồng Tháp",
-        "Gia Lai",
-        "Hà Giang",
-        "Hà Nam",
-        "Hà Nội",
-        "Hà Tĩnh",
-        "Hải Dương",
-        "Hải Phòng",
-        "Hậu Giang",
-        "Hòa Bình",
-        "Hưng Yên",
-        "Khánh Hòa",
-        "Kiên Giang",
-        "Kon Tum",
-        "Lai Châu",
-        "Lạng Sơn",
-        "Lào Cai",
-        "Lâm Đồng",
-        "Long An",
-        "Nam Định",
-        "Nghệ An",
-        "Ninh Bình",
-        "Quảng Bình",
-        "Quảng Nam",
-        "Quảng Ngãi",
-        "Quảng Ninh",
-        "Quảng Trị",
-        "Sóc Trăng",
-        "Sơn La",
-        "Tây Ninh",
-        "Thái Bình",
-        "Thái Nguyên",
-        "Thanh Hóa",
-        "Thừa Thiên Huế",
-        "Tiền Giang",
-        "TP. Hồ Chí Minh",
-        "Tuyên Quang",
-        "Vĩnh Long",
-        "Vĩnh Phúc",
-        "Yên Bái"
-    ];
-    const autoBoxDeparture = document.querySelector(".departure .autobox");
-    const autoBoxDestination = document.querySelector(".destination .autobox");
-    
-    const showAddress = (list, num, autobox, input) => {
-        let tempArr = [];
-        let listData;
+       if (!list.length) {
+           listData = `<li>${input.value}</li>`
+       }
+       else {
+           // Giới hạn số lượng kết quả hiện ra màn hình là num
+           for (let i = 0; i < list.length && i < num; i++) {
+               tempArr.push(list[i]);
+           }
+           listData = tempArr.join('')
+       }
+       autobox.innerHTML = listData;
+   };
+   
+   departureInput.addEventListener("keyup", (e) => {
+       let checkData = e.target.value; // dữ liệu đầu vào
+       let dataArr = []; // mảng kết quả sau khi được lọc dựa vào dữ liệu đầu vào
 
-        if (!list.length) {
-            listData = `<li>${input.value}</li>`
-        }
-        else {
-            // Giới hạn số lượng kết quả hiện ra màn hình là num
-            for (let i = 0; i < list.length && i < num; i++) {
-                tempArr.push(list[i]);
-            }
-            listData = tempArr.join('')
-        }
-        autobox.innerHTML = listData;
-    };
-    
-    departureInput.addEventListener("keyup", (e) => {
-        let checkData = e.target.value; // dữ liệu đầu vào
-        let dataArr = []; // mảng kết quả sau khi được lọc dựa vào dữ liệu đầu vào
+       if (checkData) {
+           // Thực hiện chức năng lọc dựa vào chữ cái đầu của dữ liệu đầu vào
+           dataArr = recomentList.filter(data => {
+               return data.toLocaleLowerCase().startsWith(checkData.toLocaleLowerCase());
+           });
+           
+           // Thực hiện thao tác chuyển các data trong mảng kết quả về dạng <li></li> để in ra HTML
+           dataArr = dataArr.map(data => {
+               return data = `<li>${data}</li>`;
+           });
+           // Thêm class active để bật bảng kết quả tìm kiếm
+           autoBoxDeparture.classList.add("active");
 
-        if (checkData) {
-            // Thực hiện chức năng lọc dựa vào chữ cái đầu của dữ liệu đầu vào
-            dataArr = recomentList.filter(data => {
-                return data.toLocaleLowerCase().startsWith(checkData.toLocaleLowerCase());
-            });
-            
-            // Thực hiện thao tác chuyển các data trong mảng kết quả về dạng <li></li> để in ra HTML
-            dataArr = dataArr.map(data => {
-                return data = `<li>${data}</li>`;
-            });
-            // Thêm class active để bật bảng kết quả tìm kiếm
-            autoBoxDeparture.classList.add("active");
+           // Hàm thực hiện chức năng in các kết quả tìm kiếm
+           showAddress(dataArr, 5, autoBoxDeparture, departureInput);
 
-            // Hàm thực hiện chức năng in các kết quả tìm kiếm
-            showAddress(dataArr, 5, autoBoxDeparture, departureInput);
+           // Thực hiện chức năng bấm vào kết quả thì kết quả được hiện lên ô input
+           let liItem = autoBoxDeparture.querySelectorAll("li");
+           for (let i = 0; i < liItem.length; i++) {
+               liItem[i].addEventListener("mousedown", () => {
+                   departureInput.value = liItem[i].innerHTML;
+                   autoBoxDeparture.classList.remove("active");
+               })
+           }
+       }
+       else {
+           autoBoxDeparture.classList.remove("active");
+       }
+   });
 
-            // Thực hiện chức năng bấm vào kết quả thì kết quả được hiện lên ô input
-            let liItem = autoBoxDeparture.querySelectorAll("li");
-            for (let i = 0; i < liItem.length; i++) {
-                liItem[i].addEventListener("mousedown", () => {
-                    departureInput.value = liItem[i].innerHTML;
-                    autoBoxDeparture.classList.remove("active");
-                })
-            }
-        }
-        else {
-            autoBoxDeparture.classList.remove("active");
-        }
-    });
+   // Thực hiện thao tác đóng bảng kết quả khi click ra ngoài 
+   departureInput.addEventListener("blur", () => {
+       autoBoxDeparture.classList.remove("active");
+   });
 
-    // Thực hiện thao tác đóng bảng kết quả khi click ra ngoài 
-    departureInput.addEventListener("blur", () => {
-        autoBoxDeparture.classList.remove("active");
-    });
+   destinationInput.addEventListener("keyup", (e) => {
+       let checkData = e.target.value; // dữ liệu đầu vào
+       let dataArr = []; // mảng kết quả sau khi được lọc dựa vào dữ liệu đầu vào
 
-    destinationInput.addEventListener("keyup", (e) => {
-        let checkData = e.target.value; // dữ liệu đầu vào
-        let dataArr = []; // mảng kết quả sau khi được lọc dựa vào dữ liệu đầu vào
+       if (checkData) {
+           // Thực hiện chức năng lọc dựa vào chữ cái đầu của dữ liệu đầu vào
+           dataArr = recomentList.filter(data => {
+               return data.toLocaleLowerCase().normalize('NFD').includes(checkData.toLocaleLowerCase().normalize('NFD'));
+           });
+           
+           // Thực hiện thao tác chuyển các data trong mảng kết quả về dạng <li></li> để in ra HTML
+           dataArr = dataArr.map(data => {
+               return data = `<li>${data}</li>`;
+           });
+           // Thêm class active để bật bảng kết quả tìm kiếm
+           autoBoxDestination.classList.add("active");
 
-        if (checkData) {
-            // Thực hiện chức năng lọc dựa vào chữ cái đầu của dữ liệu đầu vào
-            dataArr = recomentList.filter(data => {
-                return data.toLocaleLowerCase().normalize('NFD').includes(checkData.toLocaleLowerCase().normalize('NFD'));
-            });
-            
-            // Thực hiện thao tác chuyển các data trong mảng kết quả về dạng <li></li> để in ra HTML
-            dataArr = dataArr.map(data => {
-                return data = `<li>${data}</li>`;
-            });
-            // Thêm class active để bật bảng kết quả tìm kiếm
-            autoBoxDestination.classList.add("active");
+           // Hàm thực hiện chức năng in các kết quả tìm kiếm
+           showAddress(dataArr, 5, autoBoxDestination, destinationInput);
 
-            // Hàm thực hiện chức năng in các kết quả tìm kiếm
-            showAddress(dataArr, 5, autoBoxDestination, destinationInput);
+           // Thực hiện chức năng bấm vào kết quả thì kết quả được hiện lên ô input
+           let liItem = autoBoxDestination.querySelectorAll("li");
+           for (let i = 0; i < liItem.length; i++) {
+               liItem[i].addEventListener("mousedown", () => {
+                   destinationInput.value = liItem[i].innerHTML;
+                   autoBoxDestination.classList.remove("active");
+               })
+           }
+       }
+       else {
+           autoBoxDestination.classList.remove("active");
+       }
+   });
 
-            // Thực hiện chức năng bấm vào kết quả thì kết quả được hiện lên ô input
-            let liItem = autoBoxDestination.querySelectorAll("li");
-            for (let i = 0; i < liItem.length; i++) {
-                liItem[i].addEventListener("mousedown", () => {
-                    destinationInput.value = liItem[i].innerHTML;
-                    autoBoxDestination.classList.remove("active");
-                })
-            }
-        }
-        else {
-            autoBoxDestination.classList.remove("active");
-        }
-    });
+   // Thực hiện thao tác đóng bảng kết quả khi click ra ngoài 
+   destinationInput.addEventListener("blur", () => {
+       autoBoxDestination.classList.remove("active");
+   });
 
-    // Thực hiện thao tác đóng bảng kết quả khi click ra ngoài 
-    destinationInput.addEventListener("blur", () => {
-        autoBoxDestination.classList.remove("active");
-    });
+   flatpickr("#time", {
+       dateFormat: "d-m-Y"
+   });
 
-    flatpickr("#time", {
-        dateFormat: "d-m-Y"
-    });
-    
     //------------- REGEX -------------
     
     // kiểm tra regex

@@ -167,6 +167,60 @@ input[type="color"]:focus,
   box-shadow: 0 1px 1px rgba(256, 256, 256, 0.075);
 }
 
+.input-group {
+    position: relative;
+}
+
+.autobox {
+    position: absolute;
+    top: 112%;
+    background-color: #fff;
+    width: 100%;
+    overflow-y: auto;
+    z-index: 999;
+}
+
+.autobox li {
+    list-style: none;
+    padding: 6px 0 6px 36px;
+    cursor: pointer;
+    display: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+} 
+
+.autobox li:hover {
+    color: #F9AB52;
+} 
+
+.autobox.active li {
+    display: block;
+}
+
+.flatpickr-months .flatpickr-month {
+    background-color: #F9AB52 !important;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+    background-color: #F9AB52 !important;
+}
+
+.flatpickr-weekdays {
+    background-color: #F9AB52 !important;
+}
+
+.flatpickr-weekday {
+    background-color: #F9AB52 !important;
+}
+
+.flatpickr-calendar.arrowTop:after {
+    border-bottom-color: #F9AB52 !important;
+}
+
+.flatpickr-calendar.arrowBottom:after {
+    border-top-color: #F9AB52 !important;
+}
+
+
 /* ----------------- CONTENT ----------------- */
 .content-item {
     width: 90vw;

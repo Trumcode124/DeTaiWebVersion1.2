@@ -8,6 +8,22 @@ let dsTour = [
         ngayKhoiHanh: "28/3/2024", 
         gia: "4.499.000đ", 
         giaTruocKhiGiam: "6.499.000đ" ,
+        tongquan:"Hành trình khám phá Quảng trường Ba Đình, Hà Nội, là một cơ hội tuyệt vời để khám phá vẻ đẹp lịch sử và văn hóa của thủ đô nước Việt Nam. Quảng trường Ba Đình không chỉ là điểm gặp gỡ quan trọng của người dân Hà Nội mà còn là nơi chứa đựng nhiều kỷ niệm và sự kiện quan trọng trong lịch sử dân tộc.",
+        lichTrinh:  `<div class="box"> <div class="schedule">Ngày 1 </div><p>
+        - 08:00 - 09:00: Đón khách tại điểm hẹn và di chuyển đến Quảng trường Ba Đình.
+        - 09:30 - 11:30: Thăm quan các điểm lịch sử trên quảng trường, bao gồm Lăng Chủ tịch Hồ Chí Minh và Nhà tưởng niệm.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng gần Quảng trường Ba Đình.
+        - 13:30 - 15:30: Tiếp tục khám phá các di tích lịch sử lân cận như Bảo tàng Dân tộc học Việt Nam và Di tích Lịch sử Quốc gia Hồ Chí Minh.
+        - 16:00 - 18:00: Thăm quan các điểm du lịch văn hóa gần Quảng trường, bao gồm Nhà hát Lớn Hà Nội và Chùa Một Cột.
+        - 18:30 - 20:00: Dùng tối tại một nhà hàng địa phương và thưởng thức ẩm thực đặc sản của Hà Nội.        
+        </p> 
+        </div>  <div class="box"> <div class="schedule">Ngày 2 </div> <p>
+        - 06:30 - 07:30: Ăn sáng tại khách sạn.
+        - 08:00 - 10:00: Tiếp tục khám phá Quảng trường Ba Đình và các điểm tham quan lân cận.
+        - 10:30 - 12:00: Trải nghiệm mua sắm và tham quan các cửa hàng lưu niệm về Hà Nội.
+        - 12:30 - 13:30: Dùng cơm trưa và rời khỏi khu vực Quảng trường Ba Đình.
+        - 14:00: Trả khách về điểm hẹn hoặc sân bay.
+        </p> </div> `,
         hinhAnh:"../image/TourMienBac/HaNoi/HaNoi1.jpg",
         hinhAnh2:"../image/TourMienBac/HaNoi/HaNoi2.jpg",
         hot:"1" ,
@@ -21,6 +37,21 @@ let dsTour = [
         ngayKhoiHanh: "15/4/2024", 
         gia: "2.999.000đ", 
         giaTruocKhiGiam: "3.999.000đ" ,
+        tongquan:"Hành trình khám phá Sa Pa và Ruộng Bậc Thang, Lào Cai, là một trải nghiệm tuyệt vời để bạn khám phá vẻ đẹp hoang sơ và sự hấp dẫn của vùng núi phía Bắc Việt Nam. Với những cánh đồng bậc thang xanh mướt bao quanh và khung cảnh núi non hùng vĩ, Sa Pa và Ruộng Bậc Thang đã thu hút hàng ngàn du khách mỗi năm.",
+        lichTrinh:  `<div class="box"> <div class="schedule">Ngày 1 </div><p>
+        - 08:00 - 09:00: Đón khách tại điểm hẹn và khởi hành đến Sa Pa.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng địa phương tại Sa Pa.
+        - 13:30 - 15:30: Thăm quan các điểm du lịch nổi tiếng của Sa Pa như Hồ Sa Pa, Cầu Mây và Thác Bạc.
+        - 16:00 - 18:00: Check-in khách sạn và thư giãn tại Sa Pa.
+        - 18:30 - 20:00: Dùng tối tại một nhà hàng địa phương và thưởng thức ẩm thực đặc sản của vùng.
+        </p> 
+        </div>  <div class="box"> <div class="schedule">Ngày 2 </div> <p>
+        - 06:00 - 07:00: Ăn sáng tại khách sạn và chuẩn bị cho ngày tiếp theo.
+        - 07:30 - 11:30: Khám phá Ruộng Bậc Thang, đi bộ qua các cánh đồng bậc thang và tận hưởng không gian thiên nhiên tuyệt vời.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng trên đỉnh Ruộng Bậc Thang.
+        - 13:30 - 15:30: Tiếp tục khám phá Ruộng Bậc Thang hoặc tham gia các hoạt động văn hóa tại làng dân tộc thiểu số.
+        - 16:00: Trả khách về điểm hẹn hoặc sân bay.
+        </p> </div> `,
         hinhAnh:"../image/TourMienBac/LaoCai/SaPa1.jpg",
         hinhAnh2:"../image/TourMienBac/LaoCai/SaPa2.jpg",
         hot:"1" ,
@@ -87,14 +118,27 @@ let dsTour = [
     },
 
     {   maTour:5, 
-        tenTour:"cầu Bàn Tay - Cầu Con Rồng - Đà Nãng", 
+        tenTour:"Cầu Bàn Tay - Cầu Con Rồng - Đà Nãng", 
         thoiGian: "5 ngày 4 đêm", 
         phuongTien: "Máy bay", 
         ngayKhoiHanh: "25/4/2024", 
         gia: "4.999.000đ", 
         giaTruocKhiGiam: "5.599.000đ" ,
-        tongquan:"Đà Nẵng, thành phố đáng sống và động lực kinh tế của miền Trung Việt Nam, là một điểm đến tuyệt vời cho du lịch. Với bãi biển trải dài và nước biển trong xanh, Đà Nẵng thu hút du khách bằng vẻ đẹp tự nhiên tuyệt mỹ. Nơi đây có Cầu Rồng độc đáo và Bán đảo Sơn Trà với quần thể linh thiêng và rừng nguyên sinh. Bạn cũng không thể bỏ qua thành phố cổ Hội An, nằm gần Đà Nẵng, với kiến trúc lịch sử độc đáo và không khí tươi mát.\n Đà Nẵng còn có Bà Nà Hills với cáp treo độc đáo, Mỹ Sơn - di sản thế giới của người Chăm, và Cầu Vàng nổi tiếng. Ngoài ra, thành phố còn có nhiều khu vui chơi, như Công viên Châu Á, Sun World Đà Nẵng và Công viên Cá Heo.\n Đà Nẵng cũng gần các điểm du lịch nổi tiếng như Huế và Hội An, tạo điều kiện thuận lợi cho việc khám phá vùng lân cận. Với sự kết hợp hài hòa giữa thiên nhiên tươi đẹp và tiện nghi hiện đại, Đà Nẵng là một điểm đến không thể bỏ qua khi du lịch tại Việt Nam.",
-
+        tongquan:"Hành trình khám phá Cầu Bàn Tay, Cầu Con Rồng và thành phố Đà Nẵng mang đến một trải nghiệm tuyệt vời về văn hóa, kiến trúc và vẻ đẹp tự nhiên của miền Trung Việt Nam. Các biểu tượng nổi tiếng này không chỉ là điểm đến hấp dẫn cho du khách mà còn là biểu tượng của sự phát triển và tiến bộ của thành phố Đà Nẵng.",
+        lichTrinh:  `<div class="box"> <div class="schedule">Ngày 1 </div><p>
+        - 08:00 - 09:00: Khách hàng được đón tại điểm hẹn và bắt đầu hành trình đến Đà Nẵng.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng địa phương tại Đà Nẵng để thưởng thức các món ăn đặc sản.
+        - 13:30 - 15:30: Khám phá Cầu Bàn Tay, một trong những biểu tượng kiến trúc nổi tiếng của Đà Nẵng, nơi bạn có thể ngắm nhìn toàn cảnh thành phố và cảm nhận vẻ đẹp của dòng sông Hàn.
+        - 16:00 - 18:00: Thăm quan khu vực xung quanh Cầu Con Rồng, một biểu tượng kiến trúc ấn tượng với hình dáng rồng đang vươn cánh bên trên sông Hàn.
+        - 18:30 - 20:00: Dùng tối tại một nhà hàng ven biển và thưởng thức các món hải sản tươi ngon
+        </p> 
+        </div>  <div class="box"> <div class="schedule">Ngày 2 </div> <p>
+        - 06:30 - 07:30: Ăn sáng tại khách sạn và chuẩn bị cho ngày tiếp theo.
+        - 08:00 - 11:30: Tiếp tục khám phá Đà Nẵng bằng cách thăm các điểm du lịch nổi tiếng khác như Bãi biển Mỹ Khê, Công viên Châu Á và Bà Nà Hills.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng địa phương.
+        - 13:30 - 15:30: Thăm quan khu vực trung tâm thành phố và mua sắm tại các cửa hàng lưu niệm để mang về những món quà ý nghĩa cho gia đình và bạn bè.
+        - 16:00: Trả khách về điểm hẹn hoặc sân bay để kết thúc chuyến đi.
+        </p> </div> `,
         hinhAnh:"../image/TourMienTrung/DaNang/DaNang1.jpg",
         hinhAnh2:"../image/TourMienTrung/DaNang/DaNang2.jpg",
         hot:"1" ,
@@ -108,8 +152,22 @@ let dsTour = [
         ngayKhoiHanh: "4/5/2024", 
         gia: "3.199.000đ", 
         giaTruocKhiGiam: "3.799.000đ" ,
-        tongquan: "Huế, thành phố cổ kính của Việt Nam, là một điểm đến thú vị cho du khách khám phá. Với kiến trúc hoàng gia tuyệt đẹp và di sản văn hóa phong phú, Huế hấp dẫn du khách bằng vẻ đẹp lịch sử và không gian thanh bình. Bạn sẽ bị mê hoặc bởi Cung điện Hoàng Gia, Đại Nội và Thiên Mụ Pagoda - những biểu tượng văn hóa độc đáo của Huế.\n Đến Huế, bạn cũng có cơ hội thưởng thức ẩm thực truyền thống độc đáo và tham gia vào các lễ hội truyền thống tuyệt vời. Hãy đắm chìm trong vẻ đẹp tinh tế của Huế và trải nghiệm một chuyến du lịch đáng nhớ.",
-
+        tongquan:"Hành trình khám phá Cố Đô Huế, Cầu Trường Tiền và Thừa Thiên Huế là một hành trình mang lại trải nghiệm sâu sắc về lịch sử, văn hóa và kiến trúc của miền Trung Việt Nam. Với những di sản văn hóa và kiến trúc đặc biệt, Huế là điểm đến không thể bỏ qua cho những ai yêu thích sự hòa mình vào không gian lịch sử và tâm linh.",
+        lichTrinh:  `<div class="box"> <div class="schedule">Ngày 1 </div><p>
+        - 08:00 - 09:00: Đón khách tại điểm hẹn và bắt đầu hành trình khám phá Cố Đô Huế.
+        - 09:30 - 11:30: Thăm quan các điểm du lịch nổi tiếng của Cố Đô Huế như Hoàng thành Huế, Thiên Mụ Pagoda và Lăng Tự Đức.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng truyền thống với các món ăn Huế đặc trưng.
+        - 13:30 - 15:30: Tiếp tục khám phá các di tích lịch sử và kiến trúc khác của Cố Đô Huế như Lăng Khải Định và Lăng Minh Mạng.
+        - 16:00 - 18:00: Tham quan Cầu Trường Tiền, biểu tượng gắn liền với bức tranh văn hóa Huế và ngắm cảnh hoàng hôn từ trên cầu.
+        - 18:30 - 20:00: Dùng tối tại một nhà hàng địa phương và thưởng thức ẩm thực Huế đặc sản.
+        </p> 
+        </div>  <div class="box"> <div class="schedule">Ngày 2 </div> <p>
+        - 06:30 - 07:30: Ăn sáng tại khách sạn và chuẩn bị cho ngày tiếp theo.
+        - 08:00 - 11:30: Tiếp tục khám phá các điểm du lịch nổi tiếng khác của Thừa Thiên Huế như Chùa Thiên An và Lăng Văn Hiến.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng địa phương.
+        - 13:30 - 15:30: Thăm quan khu vực trung tâm thành phố Huế và mua sắm các sản phẩm lưu niệm tại các cửa hàng địa phương.
+        - 16:00: Trả khách về điểm hẹn hoặc sân bay để kết thúc chuyến đi.        
+        </p> </div> `,
         hinhAnh:"../image/TourMienTrung/Hue/Hue1.jpg",
         hinhAnh2:"../image/TourMienTrung/Hue/Hue2.jpg",
         hot:"1" ,
@@ -124,8 +182,23 @@ let dsTour = [
         ngayKhoiHanh: "25/4/2024", 
         gia: "4.999.000đ", 
         giaTruocKhiGiam: "5.599.000đ" ,
-        tongquan:"Nha Trang, thành phố biển nổi tiếng của Việt Nam, là một điểm đến vô cùng hấp dẫn cho du khách. Với bờ biển trải dài, cát trắng mịn và nước biển trong xanh, Nha Trang mang đến một khung cảnh tuyệt đẹp và không thể cưỡng lại. Du khách có thể tận hưởng thời gian nghỉ ngơi trên bãi biển Trần Phú hay tham gia vào các hoạt động thể thao nước như lặn biển, lướt ván, hay đi thuyền trên vịnh.\n Nha Trang cũng nổi tiếng với các điểm tham quan như Tháp Bà Ponagar, Vinpearl Land và Viện Hải dương học Nha Trang. Không chỉ vậy, thành phố còn hấp dẫn du khách bởi ẩm thực đa dạng và đặc sản hải sản tươi ngon. Hãy đến Nha Trang và trải nghiệm những khoảnh khắc tuyệt vời trên bờ biển rực rỡ này.",
+        tongquan:"Hành trình khám phá Vinpearl Land - Nha Trang là một chuyến đi giải trí đầy thú vị tại một trong những điểm đến nổi tiếng của miền Trung Việt Nam. Vinpearl Land không chỉ là một công viên giải trí hàng đầu mà còn là khu nghỉ dưỡng sang trọng, đem lại cho du khách trải nghiệm đa dạng và thú vị.",
+        lichTrinh:  `<div class="box"> <div class="schedule">Ngày 1 </div><p>
+        - 08:00 - 09:00: Đón khách tại điểm hẹn và bắt đầu hành trình đến Vinpearl Land - Nha Trang.
+        - 09:30 - 11:30: Khám phá các trò chơi và công trình giải trí tại Vinpearl Land như Công viên nước, Công viên hóa thạch, và Rạp xiếc.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng hoặc quầy thức ăn nhanh trong khuôn viên Vinpearl Land.
+        - 13:30 - 15:30: Tiếp tục tham quan các khu vực giải trí khác như Vườn thú, Khu vui chơi trẻ em, và Khu vui chơi cảm giác mạnh.
+        - 16:00 - 18:00: Thư giãn và tận hưởng không gian nghỉ dưỡng tại bãi biển riêng của Vinpearl Land hoặc tham gia các hoạt động giải trí trên biển.
+        - 18:30 - 20:00: Dùng tối tại một nhà hàng trong khuôn viên Vinpearl Land và thưởng thức các món ăn đặc sản vùng biển.
 
+        </p> 
+        </div>  <div class="box"> <div class="schedule">Ngày 2 </div> <p>
+        - 06:30 - 07:30: Ăn sáng tại khách sạn hoặc khuôn viên Vinpearl Land.
+        - 08:00 - 11:30: Tiếp tục khám phá Vinpearl Land với các hoạt động giải trí khác như tham gia các trò chơi ngoài trời, tham quan khu vườn hoa, hoặc tham gia các lớp học và trải nghiệm văn hóa.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng hoặc quầy thức ăn nhanh trong khuôn viên Vinpearl Land.
+        - 13:30 - 15:30: Thư giãn và mua sắm tại khu trung tâm thương mại và cửa hàng lưu niệm của Vinpearl Land.
+        - 16:00: Trả khách về điểm hẹn hoặc sân bay để kết thúc chuyến đi.            
+        </p> </div> `,
         hinhAnh:"../image/TourMienTrung/NhaTrang/NhaTrang1.jpg",
         hinhAnh2:"../image/TourMienTrung/NhaTrang/NhaTrang2.jpg",
         hot:"0" ,
@@ -139,9 +212,22 @@ let dsTour = [
         ngayKhoiHanh: "25/4/2024", 
         gia: "4.999.000đ", 
         giaTruocKhiGiam: "5.599.000đ" ,
-        tongquan:"Phan Thiết, một thiên đường biển nằm ở miền Nam Việt Nam, là một điểm đến tuyệt vời cho du lịch. Với bãi biển dài, cát vàng óng mịn, Phan Thiết thu hút du khách bằng vẻ đẹp tự nhiên tuyệt đẹp. Những cơn gió biển thổi mát làm cho kỳ nghỉ tại đây trở nên thú vị hơn. Du khách có thể thả mình trên bãi biển Mũi Né, tắm nắng, tham gia các hoạt động thể thao nước như lướt ván, đi buồm, hay tham gia vào các tour lặn biển khám phá đáy biển phong phú.\n Ngoài ra, Phan Thiết còn nổi tiếng với Đồi Cát Bay, nơi có những cồn cát lớn hình thành từ gió biển và tạo nên cảnh quan độc đáo. Không chỉ có vẻ đẹp tự nhiên, Phan Thiết cũng hấp dẫn du khách bởi ẩm thực đa dạng và đặc sản hải sản tươi ngon. Hãy đến Phan Thiết và thưởng thức những trải nghiệm tuyệt vời trên bờ biển tuyệt đẹp này.",
-
-
+        tongquan:"Hành trình khám phá Làng Chài Mũi Né, Tháp Po Sah Inư và Phan Thiết mang đến cho du khách một trải nghiệm độc đáo về văn hóa, lịch sử và vẻ đẹp tự nhiên của vùng đất ven biển miền Nam Việt Nam. Tại đây, du khách có cơ hội tìm hiểu về cuộc sống của người dân làng chài, khám phá di sản lịch sử và thưởng ngoạn cảnh đẹp của biển Phan Thiết.",
+        lichTrinh:  `<div class="box"> <div class="schedule">Ngày 1 </div><p>
+        - 08:00 - 09:00: Đón khách tại điểm hẹn và khởi hành đến Làng Chài Mũi Né.
+        - 09:30 - 11:30: Thăm quan Làng Chài Mũi Né, nơi bạn có cơ hội tìm hiểu về cuộc sống và nghề cá truyền thống của người dân bản địa.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng ven biển và thưởng thức hải sản tươi ngon.
+        - 13:30 - 15:30: Tiếp tục hành trình đến Tháp Po Sah Inư, một di tích chứng tỏ văn hóa Chăm Pa cổ đại tại khu vực.
+        - 16:00 - 18:00: Check-in khách sạn và thư giãn tại Phan Thiết.
+        - 18:30 - 20:00: Dùng tối tại một nhà hàng địa phương và thưởng thức các món ăn đặc sản của Phan Thiết.
+        </p> 
+        </div>  <div class="box"> <div class="schedule">Ngày 2 </div> <p>
+        - 06:30 - 07:30: Ăn sáng tại khách sạn và chuẩn bị cho ngày tiếp theo.
+        - 08:00 - 11:30: Tham quan các điểm du lịch nổi tiếng của Phan Thiết như Bãi biển Mũi Né, Đồi cát Phan Thiết và KDL Suối Tiên.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng địa phương.
+        - 13:30 - 15:30: Thăm quan khu trung tâm thành phố Phan Thiết và mua sắm tại các cửa hàng lưu niệm.
+        - 16:00: Trả khách về điểm hẹn hoặc sân bay để kết thúc chuyến đi.   
+        </p> </div> `,
         hinhAnh:"../image/TourMienTrung/PhanThiet/PhanThiet1.jpg",
         hinhAnh2:"../image/TourMienTrung/PhanThiet/PhanThiet2.jpg",
         hot:"0" ,
@@ -155,8 +241,22 @@ let dsTour = [
         ngayKhoiHanh: "1/7/2024", 
         gia: "7.599.000đ", 
         giaTruocKhiGiam: "7.999.000đ" ,
-        tongquan:"Phú Yên, một tỉnh ven biển tuyệt đẹp ở miền Trung Việt Nam, là một điểm đến độc đáo cho du lịch. Với bờ cát trắng tinh khôi và biển xanh trong, Phú Yên hấp dẫn du khách bằng vẻ đẹp tự nhiên hoang sơ. Bãi Xep, Bãi Tràm và Vũng Rô là những bãi biển nổi tiếng với không gian yên bình và cảnh quan hùng vĩ.\n Ngoài ra, Phú Yên còn có Đảo Nhạn, nơi bạn có thể thăm quan hệ thống hang động độc đáo và tận hưởng phong cảnh thiên nhiên hoang sơ. Đừng quên khám phá vịnh Xuân Đài, nơi có khung cảnh đẹp mê hồn và hoàng hôn tuyệt vời. Phú Yên cũng nổi tiếng với món hải sản tươi ngon và nền văn hóa dân gian độc đáo. Hãy đến Phú Yên và khám phá những khoảnh khắc tuyệt vời trong chuyến du lịch của bạn.",
-
+        tongquan:"Hành trình này sẽ dẫn du khách khám phá vẻ đẹp hoang sơ và tinh tế của Phú Yên thông qua việc thăm quan Bãi biển Mũi Điện và Tháp Nghinh Phong. Đây là cơ hội tuyệt vời để tận hưởng bãi biển trải dài và khám phá di sản văn hóa của vùng đất này.",
+        lichTrinh:  `<div class="box"> <div class="schedule">Ngày 1 </div><p>
+        - 08:00 - 09:00: Đón khách tại điểm hẹn và khởi hành đến Phú Yên.
+        - 10:00 - 11:30: Đến Bãi biển Mũi Điện và thăm quan, tận hưởng không khí trong lành và ngắm nhìn cảnh đẹp của biển cả.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng ven biển và thưởng thức hải sản tươi ngon.
+        - 13:30 - 15:30: Tiếp tục hành trình đến Tháp Nghinh Phong, một điểm du lịch nổi tiếng với kiến trúc độc đáo và tầm nhìn tuyệt vời.
+        - 16:00 - 18:00: Check-in khách sạn và thư giãn tại Phú Yên.
+        - 18:30 - 20:00: Dùng tối tại một nhà hàng địa phương và thưởng thức ẩm thực đặc sản của vùng.
+        </p> 
+        </div>  <div class="box"> <div class="schedule">Ngày 2 </div> <p>
+        - 06:30 - 07:30: Ăn sáng tại khách sạn và chuẩn bị cho ngày tiếp theo.
+        - 08:00 - 11:30: Khám phá các điểm du lịch khác của Phú Yên như Đèo Cả, Bãi Xép và Mũi Đôi.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng địa phương.
+        - 13:30 - 15:30: Thăm quan khu trung tâm thành phố Phú Yên và mua sắm tại các cửa hàng lưu niệm.
+        - 16:00: Trả khách về điểm hẹn hoặc sân bay để kết thúc chuyến đi.
+        </p> </div> `,
         hinhAnh:"../image/TourMienTrung/PhuYen/PhuYen1.jpg",
         hinhAnh2:"../image/TourMienTrung/PhuYen/PhuYen2.jpg",
         hot:"0" ,
@@ -170,8 +270,22 @@ let dsTour = [
         ngayKhoiHanh: "26/4/2024", 
         gia: "2.999.000đ", 
         giaTruocKhiGiam: "3.199.000đ" ,
-        tongquan:"Vinh là thành phố nằm ở tỉnh Nghệ An, Việt Nam. Với vị trí địa lý quan trọng, Vinh là trung tâm kinh tế, chính trị và văn hóa của khu vực miền Trung. Thành phố nổi tiếng với những di tích lịch sử quan trọng như Di tích Hồ Chí Minh và Làng cổ Cửa Đông.\n Ngoài ra, Vinh cũng có các điểm đến du lịch hấp dẫn như Chợ Cửa Lò và khu du lịch biển Quỳnh Lưu. Vinh tự hào về văn hóa đậm đà và lòng hiếu khách của người dân nơi đây. Thành phố cũng là nơi có nền giáo dục phát triển, với nhiều trường đại học và cao đẳng.",
-
+        tongquan:"Hành trình này mang đến cơ hội để khám phá vẻ đẹp lịch sử và văn hóa của Thành phố Vinh thông qua việc thăm quan Quảng trường và Tượng đài Hồ Chí Minh. Đây là một trải nghiệm ý nghĩa để hiểu sâu hơn về di sản văn hóa và tinh thần của người dân Việt Nam.",
+        lichTrinh:  `<div class="box"> <div class="schedule">Ngày 1 </div><p>
+        - 08:00 - 09:00: Đón khách tại điểm hẹn và bắt đầu hành trình đến Thành phố Vinh.
+        - 10:00 - 11:30: Thăm quan Quảng trường và Tượng đài Hồ Chí Minh, điểm đến đầu tiên của chúng ta. Tại đây, du khách có cơ hội chiêm ngưỡng tượng đài lớn của Chủ tịch Hồ Chí Minh và khám phá về ý nghĩa lịch sử của nơi này.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng địa phương và thưởng thức các món ăn ngon miền Trung.
+        - 13:30 - 15:30: Tiếp tục thăm quan các điểm du lịch khác của Thành phố Vinh như Bảo tàng Hồ Chí Minh, Nhà thờ Đức Bà, và Chợ Vinh để tìm hiểu về văn hóa và đời sống địa phương.
+        - 16:00 - 18:00: Thư giãn và mua sắm tại các cửa hàng lưu niệm và trung tâm thương mại.
+        - 18:30 - 20:00: Dùng tối tại một nhà hàng địa phương và thưởng thức ẩm thực đặc sản của vùng.        
+        </p> 
+        </div>  <div class="box"> <div class="schedule">Ngày 2 </div> <p>
+        - 06:30 - 07:30: Ăn sáng tại khách sạn và chuẩn bị cho ngày tiếp theo.
+        - 08:00 - 11:30: Tiếp tục khám phá các điểm du lịch nổi tiếng khác của Thành phố Vinh như Khu du lịch sinh thái Pu Mat, Khu di tích Quốc gia Đồng Lễ và Khu du lịch Bãi Ân Hòa.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng địa phương.
+        - 13:30 - 15:30: Tham quan các điểm du lịch cuối cùng và tận hưởng không gian tự nhiên tại Vinh trước khi chuẩn bị trở về.
+        - 16:00: Trả khách về điểm hẹn hoặc sân bay để kết thúc chuyến đi.
+        </p> </div> `,
         hinhAnh:"../image/TourMienTrung/TpVinh/TpVinh1.jpg",
         hinhAnh2:"../image/TourMienTrung/TpVinh/TpVinh2.jpg",
         hot:"0" ,
@@ -187,8 +301,22 @@ let dsTour = [
         ngayKhoiHanh: "12/5/2024", 
         gia: "1.999.000đ", 
         giaTruocKhiGiam: "2.399.000đ" ,
-        tongquan: "",
-
+        tongquan:"Hành trình này sẽ đưa du khách khám phá vẻ đẹp hoang sơ và huyền bí của quần đảo Côn Đảo thông qua việc thăm quan Hòn Bảy và Mũi Cá Mập. Đây là cơ hội tuyệt vời để trải nghiệm thiên nhiên tại một trong những điểm đến tuyệt vời nhất của Việt Nam.",
+        lichTrinh:  `<div class="box"> <div class="schedule">Ngày 1 </div><p>
+        - 08:00 - 09:00: Đón khách tại điểm hẹn và khởi hành đến Côn Đảo.
+        - 10:00 - 11:30: Đến Hòn Bảy và thăm quan các bãi biển hoang sơ, ngắm nhìn khung cảnh núi non và biển cả hùng vĩ.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng ven biển và thưởng thức hải sản tươi ngon.
+        - 13:30 - 15:30: Tiếp tục hành trình đến Mũi Cá Mập, nơi du khách có thể tham gia các hoạt động như lặn ngắm san hô, lướt sóng hoặc thư giãn trên bãi biển.
+        - 16:00 - 18:00: Check-in khách sạn và thư giãn tại Côn Đảo.
+        - 18:30 - 20:00: Dùng tối tại một nhà hàng địa phương và thưởng thức ẩm thực đặc sản của vùng.     
+        </p> 
+        </div>  <div class="box"> <div class="schedule">Ngày 2 </div> <p>
+        - 06:30 - 07:30: Ăn sáng tại khách sạn và chuẩn bị cho ngày tiếp theo.
+        - 08:00 - 11:30: Khám phá các điểm du lịch nổi tiếng khác của Côn Đảo như Hòn Đất Cấp III, Bãi Đầm Trầu và Bãi Nắng.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng địa phương.
+        - 13:30 - 15:30: Thăm quan khu trung tâm thành phố Côn Đảo và mua sắm tại các cửa hàng lưu niệm.
+        - 16:00: Trả khách về điểm hẹn hoặc sân bay để kết thúc chuyến đi.
+        </p> </div> `,
         hinhAnh:"../image/TourMienNam/ConDao/ConDao1.jpg",
         hinhAnh2:"../image/TourMienNam/ConDao/ConDao2.jpg",
         hot:"0" ,
@@ -202,6 +330,22 @@ let dsTour = [
         ngayKhoiHanh: "25/4/2024", 
         gia: "3.199.000đ", 
         giaTruocKhiGiam: "3.799.000đ" ,
+        tongquan:"Hành trình này sẽ đưa du khách khám phá vẻ đẹp tự nhiên tuyệt vời của Bình Phước thông qua việc thăm quan Thác Đứng và tận hưởng không gian giải trí tại Công viên The Destina. Đây là cơ hội tuyệt vời để trải nghiệm sự hòa mình vào thiên nhiên và tận hưởng những khoảnh khắc thư giãn bên gia đình và bạn bè.",
+        lichTrinh:  `<div class="box"> <div class="schedule">Ngày 1 </div><p>
+        - 08:00 - 09:00: Đón khách tại điểm hẹn và khởi hành đến Bình Phước.
+        - 10:00 - 11:30: Đến Thác Đứng và thăm quan, chiêm ngưỡng vẻ đẹp hoang sơ và mạnh mẽ của thác nước.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng địa phương và thưởng thức các món ăn ngon miền Nam.
+        - 13:30 - 15:30: Tiếp tục hành trình đến Công viên The Destina, một điểm đến giải trí phổ biến với các trò chơi và hoạt động dành cho gia đình và trẻ em.
+        - 16:00 - 18:00: Check-in khách sạn và thư giãn tại Bình Phước.
+        - 18:30 - 20:00: Dùng tối tại một nhà hàng địa phương và thưởng thức ẩm thực đặc sản của vùng.
+        </p> 
+        </div>  <div class="box"> <div class="schedule">Ngày 2 </div> <p>
+        - 06:30 - 07:30: Ăn sáng tại khách sạn và chuẩn bị cho ngày tiếp theo.
+        - 08:00 - 11:30: Khám phá các điểm du lịch khác của Bình Phước như Động Đất Mẹt, Suối Lớn và Khu di tích Làng Sen.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng địa phương.
+        - 13:30 - 15:30: Thăm quan khu trung tâm thành phố Bình Phước và mua sắm tại các cửa hàng lưu niệm.
+        - 16:00: Trả khách về điểm hẹn hoặc sân bay để kết thúc chuyến đi.
+        </p> </div> `,
         hinhAnh:"../image/TourMienNam/BinhPhuoc/BinhPhuoc1.jpg",
         hinhAnh2:"../image/TourMienNam/BinhPhuoc/BinhPhuoc2.jpg",
         hot:"0" ,
@@ -272,6 +416,22 @@ let dsTour = [
         ngayKhoiHanh: "2/7/2024", 
         gia: "7.499.000đ", 
         giaTruocKhiGiam: "7.899.000đ" ,
+        tongquan:"Hành trình này sẽ dẫn du khách qua những cung đường ngoạn mục của Đèo Mã Pí Lèng và khám phá vẻ đẹp hoang sơ và hùng vĩ của Thung Lũng Sủng Là ở Hà Giang. Đây là cơ hội tuyệt vời để tận hưởng không gian thiên nhiên tuyệt đẹp và khám phá văn hóa dân tộc độc đáo của vùng núi cao phía Bắc Việt Nam.",
+        lichTrinh:  `<div class="box"> <div class="schedule">Ngày 1 </div><p>
+        - 06:00 - 07:00: Đón khách tại điểm hẹn và khởi hành đến Hà Giang.
+        - 10:00 - 12:00: Đến Đèo Mã Pí Lèng và thăm quan, ngắm nhìn khung cảnh hùng vĩ của dãy núi đá vôi và sông Nho Quế.
+        - 12:30 - 13:30: Dùng cơm trưa tại một nhà hàng địa phương với các món ăn truyền thống.
+        - 14:00 - 16:00: Tiếp tục hành trình đến Thung Lũng Sủng Là và khám phá, tận hưởng vẻ đẹp hoang sơ và thanh bình của thung lũng.
+        - 16:30 - 18:00: Check-in khách sạn và thư giãn tại Hà Giang.
+        - 18:30 - 20:00: Dùng tối tại một nhà hàng địa phương và thưởng thức ẩm thực đặc sản của vùng.
+        </p> 
+        </div>  <div class="box"> <div class="schedule">Ngày 2 </div> <p>
+        - 06:30 - 07:30: Ăn sáng tại khách sạn và chuẩn bị cho ngày tiếp theo.
+        - 08:00 - 11:30: Khám phá các điểm du lịch khác của Hà Giang như Làng Lũng Cú, Chợ Phiên và Công Viên Quang Bình.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng địa phương.
+        - 13:30 - 15:30: Thăm quan khu trung tâm thành phố Hà Giang và mua sắm tại các cửa hàng lưu niệm.
+        - 16:00: Trả khách về điểm hẹn hoặc sân bay để kết thúc chuyến đi.
+        </p> </div> `,
         hinhAnh:"../image/TourMienBac/HaGiang/HaGiang1.jpg",
         hinhAnh2:"../image/TourMienBac/HaGiang/HaGiang2.jpg",
         hot:"0" ,
@@ -285,6 +445,22 @@ let dsTour = [
         ngayKhoiHanh: "13/5/2024", 
         gia: "4.299.000đ", 
         giaTruocKhiGiam: "5.199.000đ" ,
+        tongquan:"Hành trình này sẽ đưa du khách khám phá sự hòa mình vào thiên nhiên tươi đẹp của Đảo Cát Bà, thưởng ngoạn bãi biển tuyệt vời tại Đồ Sơn và khám phá nét đặc trưng của thành phố biển Hải Phòng. Đây là cơ hội tuyệt vời để tận hưởng những khoảnh khắc thư giãn và khám phá vẻ đẹp đa dạng của Việt Nam.",
+        lichTrinh:  `<div class="box"> <div class="schedule">Ngày 1 </div><p>
+        - 07:00 - 08:00: Đón khách tại điểm hẹn và khởi hành đến Hải Phòng.
+        - 09:30 - 10:30: Đến Bãi biển Đồ Sơn và thư giãn, tận hưởng bãi cát trắng và nước biển trong lành.
+        - 11:00 - 12:00: Dùng cơm trưa tại một nhà hàng ven biển và thưởng thức các món hải sản tươi ngon.
+        - 12:30 - 15:30: Chuyển đến Đảo Cát Bà bằng phà và thăm quan, khám phá các bãi biển, hang động và khu rừng của đảo.
+        - 16:00 - 18:00: Check-in khách sạn và thư giãn tại Cát Bà.
+        - 18:30 - 20:00: Dùng tối tại một nhà hàng địa phương và thưởng thức ẩm thực đặc sản của đảo.
+        </p> 
+        </div>  <div class="box"> <div class="schedule">Ngày 2 </div> <p>
+        - 06:30 - 07:30: Ăn sáng tại khách sạn và chuẩn bị cho ngày tiếp theo.
+        - 08:00 - 11:30: Tham quan các điểm du lịch nổi tiếng của Đảo Cát Bà như Vịnh Lan Hạ, Thung Lung Vàng và Hang Sạt Thủy.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng địa phương.
+        - 13:30 - 15:30: Quay lại Hải Phòng và thăm quan các điểm du lịch khác của thành phố như Cầu Đình, Lăng Bác và Chợ Cát Bà.
+        - 16:00: Trả khách về điểm hẹn hoặc sân bay để kết thúc chuyến đi.
+        </p> </div> `,
         hinhAnh:"../image/TourMienBac/HaiPhong/HaiPhong1.jpg",
         hinhAnh2:"../image/TourMienBac/HaiPhong/HaiPhong2.jpg",
         hot:"0" ,
@@ -298,6 +474,22 @@ let dsTour = [
         ngayKhoiHanh: "19/5/2024", 
         gia: "8.299.000đ", 
         giaTruocKhiGiam: "9.199.000đ" ,
+        tongquan:"Hành trình này sẽ đưa du khách khám phá vẻ đẹp thiên nhiên tại Thung Nắng, tìm hiểu về nghề gốm truyền thống tại Làng gốm Phù Lãng và khám phá vẻ đẹp lịch sử và văn hóa tại Ninh Bình. Đây là cơ hội tuyệt vời để trải nghiệm sự đa dạng của đất nước Việt Nam.",
+        lichTrinh:  `<div class="box"> <div class="schedule">Ngày 1 </div><p>
+        - 08:00 - 09:00: Đón khách tại điểm hẹn và khởi hành đến Ninh Bình.
+        - 10:00 - 11:30: Đến Thung Nắng và tham quan, khám phá vẻ đẹp của thung lũng và những cánh đồng lúa xanh mướt.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng địa phương.
+        - 13:30 - 15:30: Tiếp tục hành trình đến Làng gốm Phù Lãng và thăm các xưởng gốm truyền thống, tìm hiểu về nghề làm gốm từ đời sống hàng ngày của người dân địa phương.
+        - 16:00 - 18:00: Check-in khách sạn và thư giãn tại Ninh Bình.
+        - 18:30 - 20:00: Dùng tối tại một nhà hàng địa phương và thưởng thức ẩm thực đặc sản của vùng.
+        </p> 
+        </div>  <div class="box"> <div class="schedule">Ngày 2 </div> <p>
+        - 07:00 - 08:00: Ăn sáng tại khách sạn và chuẩn bị cho ngày tiếp theo.
+        - 08:30 - 11:30: Tham quan các điểm du lịch nổi tiếng của Ninh Bình như Hang Múa, Tam Cốc - Bích Động và Vân Long.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng địa phương.
+        - 13:30 - 15:30: Thăm quan khu trung tâm thành phố Ninh Bình và mua sắm tại các cửa hàng lưu niệm.
+        - 16:00: Trả khách về điểm hẹn hoặc sân bay để kết thúc chuyến đi.
+        </p> </div> `,
         hinhAnh:"../image/TourMienBac/NinhBinh/NinhBinh1.jpg",
         hinhAnh2:"../image/TourMienBac/NinhBinh/NinhBinh2.jpg",
         hot:"0" ,
@@ -311,6 +503,22 @@ let dsTour = [
         ngayKhoiHanh: "22/5/2024", 
         gia: "6.299.000đ", 
         giaTruocKhiGiam: "6.699.000đ" ,
+        tongquan:"Hành trình này sẽ đưa du khách khám phá một trong những kỳ quan tự nhiên tuyệt vời nhất của thế giới - Vịnh Hạ Long và khám phá vẻ đẹp độc đáo của thành phố biển Hải Phòng. Đây là cơ hội tuyệt vời để trải nghiệm sự hòa mình vào thiên nhiên tuyệt đẹp và khám phá văn hóa đa dạng của miền Bắc Việt Nam.",
+        lichTrinh:  `<div class="box"> <div class="schedule">Ngày 1 </div><p>
+        - 08:00 - 09:00: Đón khách tại điểm hẹn và khởi hành đến Vịnh Hạ Long.
+        - 10:00 - 12:00: Khám phá Vịnh Hạ Long trên tàu du lịch, ngắm nhìn những ngọn đồi đá vôi kỳ vĩ và những hòn đảo nổi tiếng như Đảo Ti Top, Đảo Hòn Gai và Đảo Tuần Châu.
+        - 12:30 - 13:30: Dùng cơm trưa trên tàu và thưởng thức hải sản tươi ngon.
+        - 14:00 - 15:30: Tiếp tục khám phá các hang động nổi tiếng như Hang Sửng Sốt, Hang Đầu Gỗ và Hang Trống.
+        - 16:00 - 18:00: Chuyển đến Hải Phòng và check-in khách sạn.
+        - 18:30 - 20:00: Dùng tối tại một nhà hàng địa phương và thưởng thức ẩm thực đặc sản của vùng.
+        </p> 
+        </div>  <div class="box"> <div class="schedule">Ngày 2 </div> <p>
+        - 07:00 - 08:00: Ăn sáng tại khách sạn và chuẩn bị cho ngày tiếp theo.
+        - 08:30 - 11:30: Thăm quan các điểm du lịch nổi tiếng của Hải Phòng như Cầu Đình, Bãi Cháy và Công viên Lưu Hữu Phước.
+        - 12:00 - 13:00: Dùng cơm trưa tại một nhà hàng địa phương.
+        - 13:30 - 15:30: Thăm quan khu trung tâm thành phố Hải Phòng và mua sắm tại các cửa hàng lưu niệm.
+        - 16:00: Trả khách về điểm hẹn hoặc sân bay để kết thúc chuyến đi.
+        </p> </div> `,
         hinhAnh:"../image/TourMienBac/QuangNinh/QuangNinh1.jpg",
         hinhAnh2:"../image/TourMienBac/QuangNinh/QuangNinh2.jpg",
         hot:"0" ,

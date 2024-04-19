@@ -23,20 +23,6 @@ $(document).ready(function() {
                     <ul class="navbar-nav " id="" >
                       <li class="nav-item nav-item-header mt-2"><a href="../html/trangchu.html" nav-menu class="nav-link font-header menu p-0 fw-bold text-blue choose">Trang Chủ</a></li>
                       <li class="nav-item nav-item-header my-2  "><a href="../html/vd.html" nav-menu class=" nav-link font-header menu text-blue p-0 fw-bold">Đơn Đặt Tour</a></li>
-                      <li class=" nav-item nav-item-header dropdown ">
-                        <a nav-menu href="#" class="nav-link font-header menu text-blue p-0 fw-bold dropdown-toggle m-0 my-2" data-bs-toggle="dropdown">Khu Vực</a>
-                        <ul class="dropdown-menu border-0 bg-gray ps-3 m-0">
-                          <li class="nav-item my-2">
-                            <a href="#tourMienBac" class="nav-link mini-menu font-header text-blue  p-0">Miền Bắc</a>
-                          </li>
-                          <li class=  "nav-item my-2">
-                              <a href="#tourMienTrung" class="nav-link mini-menu font-header text-blue  p-0">Miền Trung</a>
-                          </li>
-                          <li class="nav-item my-2">
-                            <a href="#tourMienNam" class="nav-link mini-menu font-header text-blue  p-0">Miền Nam</a>
-                          </li>
-                        </ul>
-                      </li>
                       <li class=" nav-item nav-item-header my-2  "><a nav-menu href="../html/khuyenmai.html" class="nav-link font-header menu text-blue p-0 fw-bold">Khuyến Mãi</a></li>
                       <li class=" nav-item nav-item-header my-2  "><a nav-menu href="../html/lienhe.html" class="nav-link font-header menu text-blue p-0 fw-bold">Liên Hệ</a></li>
                     </ul>
