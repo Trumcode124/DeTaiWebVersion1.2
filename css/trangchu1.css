@@ -39,9 +39,6 @@
     border-bottom: 3px solid #F9AB52;
     display: block;
 }
-a{
-    text-decoration: none;
-}
 
 /* ----------------- HEADER ----------------- */
 .header {
@@ -204,7 +201,6 @@ input[type="color"]:focus,
 }
 
 .card-img-top {
-    display: block;
     width: 100%;
     height: 15vw;
     object-fit: cover;
@@ -378,27 +374,3 @@ input[type="color"]:focus,
         height: 20vh;
     }
 }
-
-
-
-/* Quy */
-.hinh1 {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  
-  .hinh2 {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 15vw;
-    object-fit: cover;
-    opacity: 0;
-    transition: .5s ease;
-    
-  }
-  
-  .card:hover .hinh2 {
-    opacity: 1;
-  }

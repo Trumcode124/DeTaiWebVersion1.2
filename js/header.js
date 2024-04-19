@@ -12,7 +12,7 @@ $(document).ready(function() {
                   <span class="navbar-toggler-icon " ></span>
                 </button>
 
-                <a href="/index.html">
+                <a href="../html/trangchu.html">
                 <img src="../image/Logo.png" class="logo-page"  alt="Cheap Travel">
                 </a>
               </div>
@@ -21,7 +21,7 @@ $(document).ready(function() {
                 <div class="offcanvas offcanvas-start bg-gray" id="idnavbar">
                   <div class="offcanvas-body">
                     <ul class="navbar-nav " id="" >
-                      <li class="nav-item nav-item-header mt-2"><a href="/index.html" nav-menu class="nav-link font-header menu p-0 fw-bold text-blue choose">Trang Chủ</a></li>
+                      <li class="nav-item nav-item-header mt-2"><a href="../html/trangchu.html" nav-menu class="nav-link font-header menu p-0 fw-bold text-blue choose">Trang Chủ</a></li>
                       <li class="nav-item nav-item-header my-2  "><a href="../html/vd.html" nav-menu class=" nav-link font-header menu text-blue p-0 fw-bold">Đơn Đặt Tour</a></li>
                       <li class=" nav-item nav-item-header dropdown ">
                         <a nav-menu href="#" class="nav-link font-header menu text-blue p-0 fw-bold dropdown-toggle m-0 my-2" data-bs-toggle="dropdown">Khu Vực</a>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="../image/Logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../image/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/trangchu.css">
+    <link rel="stylesheet" href="../css/chitiettour.css">
+    <link rel="stylesheet" href="../fonts/fontawesome-free-6.4.2-web/css/all.css">
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/cardt.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/footer.js"></script>
+
+    <script>
+        $(document).ready(function() {
+        $("#txt1").text(localStorage.getItem("maTour"));
+        $("#txtTen").text(localStorage.getItem("tenTour"));
+        $("#txtGia").text(localStorage.getItem("gia"));
+        $("#txtPhuongTien").text(localStorage.getItem("phuongTien"));
+        $("#txtLichTrinh").text(localStorage.getItem("lichTrinh"));
+        $("#txtTongQuan").text(localStorage.getItem("tongquan"));
+        $("#img5").attr("src", localStorage.getItem("hinhAnh"));
+        const lichTrinh = localStorage.getItem("lichTrinh").replace(/\n/g, '<br>');
+        $("#txtLichTrinh").html(lichTrinh);
+
+        const tongquan = localStorage.getItem("tongquan").replace(/\n/g, '<br>');
+        $("#txtTongQuan").html(tongquan);
+            // Thêm các sự kiện cho các nút tăng/giảm số lượng
+            let soluong = document.getElementById("tinh");
+            let tinh = soluong.value;
+            let giaTrongLocalStorage = localStorage.getItem("gia");
+            let gia = parseFloat(giaTrongLocalStorage.replace(/[.,đ]/g, ''));
+
+            let capnhat = (tinh) => {
+                soluong.value = tinh;
+                let giaTong = gia * tinh;
+                let giaTongDinhDang = giaTong.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' }).replace('₫', ' ');
+                $("#txtGia").text(giaTongDinhDang);
+            };
+
+            let cong = () => {
+                tinh++;
+                capnhat(tinh);
+            };
+
+            let tru = () => {
+                if (tinh > 0) {
+                    tinh--;
+                    capnhat(tinh);
+                }
+            };
+
+            soluong.addEventListener("input", () => {
+                tinh = soluong.value;
+                tinh = parseInt(tinh);
+                tinh = isNaN(tinh) ? 1 : tinh;
+                capnhat(tinh);
+            });
+
+            document.getElementById("btncong").addEventListener("click", cong);
+            document.getElementById("btntru").addEventListener("click", tru);
+
+            let giaTreEmTrongLocalStorage = gia * 0.5;
+
+            let soluongTreEm = document.getElementById("tinhTreEm");
+            let tinhTreEm = soluongTreEm.value;
+
+            let capnhatTreEm = (tinhTreEm) => {
+                soluongTreEm.value = tinhTreEm;
+                let giaTongTreEm = giaTreEmTrongLocalStorage * tinhTreEm;
+                let giaTongTreEmDinhDang = giaTongTreEm.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' }).replace('₫', ' ');
+                $("#txtGiaTreEm").text(giaTongTreEmDinhDang);
+            };
+
+            let congTreEm = () => {
+                tinhTreEm++;
+                capnhatTreEm(tinhTreEm);
+            };
+
+            let truTreEm = () => {
+                if (tinhTreEm > 0) {
+                    tinhTreEm--;
+                    capnhatTreEm(tinhTreEm);
+                }
+            };
+
+            soluongTreEm.addEventListener("input", () => {
+                tinhTreEm = soluongTreEm.value;
+                tinhTreEm = parseInt(tinhTreEm);
+                tinhTreEm = isNaN(tinhTreEm) ? 0 : tinhTreEm;
+                capnhatTreEm(tinhTreEm);
+            });
+
+            document.getElementById("btncongte").addEventListener("click", congTreEm);
+            document.getElementById("btntrute").addEventListener("click", truTreEm);
+
+            let tinhTongGia = () => {
+                let giaNgLon = gia * tinh;
+                let giaTreEm = giaTreEmTrongLocalStorage * tinhTreEm;
+                let tongGia = giaNgLon + giaTreEm;
+                let tongGiaDinhDang = tongGia.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' }).replace('₫', ' ');
+                $("#tongGia").text(tongGiaDinhDang);
+            };
+
+            tinhTongGia();
+            let capNhatTongGia = () => {
+                tinhTongGia();
+            };
+
+            document.getElementById("btncong").addEventListener("click", capNhatTongGia);
+            document.getElementById("btntru").addEventListener("click", capNhatTongGia);
+
+            document.getElementById("btncongte").addEventListener("click", capNhatTongGia);
+            document.getElementById("btntrute").addEventListener("click", capNhatTongGia);
+
+            function ktraNgay(){
+                let ngay = new Date($("#txtNgay").val());
+                let now =  Math.floor((ngay - new Date()) / (1000 * 60 * 60 * 24));
+                if(isNaN(ngay)){
+                    errNgay.innerHTML = "Ngày không được để trống";
+                    return false;
+                }
+                else if(now < 15){
+                    errNgay.innerHTML = "Ngày khởi hành phải lớn hơn 15 ngày so với ngày hiện tại";
+                    return false;
+                }
+                else{
+                    errNgay.innerHTML = "";
+                    return true;
+                }
+            }
+
+            $("#txtNgay").blur(function(){
+                ktraNgay();
+            })
+            
+                    $("#btnDatTour").click(function() {
+                $('#bookingModal').modal('show');
+                
+                let departureDate = localStorage.getItem("txtNgay");
+                let adults = localStorage.getItem("tinh");
+                let children = localStorage.getItem("tinhTreEm");
+                let totalPrice = localStorage.getItem("tongGia");
+
+                $("#txtNgay").val(departureDate);
+                $("#tinh").val(adults);
+                $("#tinhTreEm").val(children);
+                $("#tongGia").val(totalPrice);
+            });
+
+            $("#confirmBooking").click(function() {
+                // Thực hiện xác nhận đặt tour, gửi dữ liệu lên máy chủ, vv.
+            });
+});
+
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container" style="margin-top: 80px; margin-bottom: 20px;">
+        <div class="row">
+            <h3 class="cap text-blue fw-bold my-4" id="txtTen">Tour: </h3>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <img src="" id="img5" class="img-fluid" alt="">
+
+                <div class="nd my-4" >
+                    <h4 class="text-blue fw-bold">Tổng quan:</h4>
+                    <p id="txtTongQuan" class="" style="line-height: 30px; word-spacing: 2px;"></p>
+
+                    <h4 class="text-blue fw-bold">Lịch trình</h4>
+                    <p id="txtLichTrinh" style="line-height: 30px; word-spacing: 2px;"></p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="colright container " >
+                    <h3 class="text-blue fw-bold">Lịch trình và Giá</h3>
+                    <h6 class="my-4">Chọn ngày khởi hành và xem giá</h6>
+                    <div class="my-4 text-center">
+                        <input type="date"  name="" id="txtNgay"  class="inputngay  w-50 text-center">
+                        <br>
+                        <span id="errNgay" style="color: red;"></span>
+                    </div>
+
+
+                    <div class="row my-4 nl align-items-center ">
+                        <div class="col">
+                            <label for="">Người lớn</label>
+
+                        </div>
+                        <div class="col">
+                            <label for="" id="txtGia"></label>
+                        </div>
+                        <div class="col tien">
+                            <button onclick="tru()" id="btntru"><i class="fa-solid fa-minus"></i></button>
+                            <input type="text" name="tinh" id="tinh" value="1">
+                            <button onclick="cong()" id="btncong"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="row my-4 nl align-items-center">
+                        <div class="col">
+                            <label for="">Trẻ em</label>
+                        </div>
+                        <div class="col">
+                            <label for="" id="txtGiaTreEm"></label>
+                        </div>
+                        <div class="col tien">
+                            <button onclick="trute()" id="btntrute"><i class="fa-solid fa-minus"></i></button>
+
+                            <input type="text" name="tinhTreEm" id="tinhTreEm" value="0">
+                            <button onclick="congte()" id="btncongte"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="row my-4 mt-4 align-items-center">
+                        <div class="col"><h6>Tổng Giá Tour</h6></div>
+                        <div class="col"><span id="tongGia" class="text-blue h3 text-center"></span></div>
+
+                    </div>
+                    <div class="row my-4">
+                        <div class="col">
+                            <button class="btn border-danger w-100 p-2 fw-bold fs-5 text-danger">Liên hệ tư vấn</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-danger w-100 p-2 fw-bold fs-5" id="btnDatTour" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                                Đặt Tour ngay
+                            </button>
+                        
+                            <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Đặt Tour</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form id="bookingForm">
+                                                <div class="mb-3">
+                                                    <label for="txtHoTen" class="form-label">Họ và tên:</label>
+                                                    <input type="text" class="form-control" id="txtHoTen">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="txtEmail" class="form-label">Email:</label>
+                                                    <input type="email" class="form-control" id="txtEmail">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="txtSoDienThoai" class="form-label">Số điện thoại:</label>
+                                                    <input type="tel" class="form-control" id="txtSoDienThoai">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="txtNgay" class="form-label">Ngày khởi hành:</label>
+                                                    <input type="text" class="form-control" id="txtNgay" readonly>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="tinh" class="form-label">Số người lớn:</label>
+                                                    <input type="text" class="form-control" id="tinh" readonly>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="tinhTreEm" class="form-label">Số trẻ em:</label>
+                                                    <input type="text" class="form-control" id="tinhTreEm" readonly>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="tongGia" class="form-label">Tổng giá:</label>
+                                                    <input type="text" class="form-control" id="tongGia" readonly>
+                                                </div>
+                                                
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                            <button type="button" class="btn btn-primary" id="confirmBooking">Xác nhận đặt tour</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="colright container my-3">
+                    <div class="row my-3">
+                        <div class="col">
+                            <i class="fa-solid fa-check text-success"></i>
+                            <label class="mx-2" for="">Bảo hiểm</label>
+                        </div>
+                        <div class="col">
+                            <i class="fa-solid fa-check text-success"></i>
+                            <label class="mx-2" for="">Bữa ăn</label>
+                        </div>
+                    </div>
+                    <div class="row my-3">
+                        <div class="col">
+                            <i class="fa-solid fa-check text-success"></i>
+                            <label class="mx-2" for="">Hướng dẫn viên</label>
+                        </div>
+                        <div class="col">
+                            <i class="fa-solid fa-check text-success"></i>
+                            <label class="mx-2" for="">Vé tham quan</label>
+                        </div>
+                    </div>
+                    <div class="row my-3">
+                        <div class="col">
+                            <i class="fa-solid fa-check text-success"></i>
+                            <label class="mx-2" for="">Xe Limousine</label>
+                        </div>
+                        <div class="col">
+                            <i class="fa-solid fa-check text-success"></i>
+                            <label class="mx-2" for="">Xe đưa đón</label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="footer"></div>
+    
+
+
+</body>
+</html>
